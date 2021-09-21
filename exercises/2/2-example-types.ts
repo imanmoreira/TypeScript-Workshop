@@ -29,10 +29,10 @@ export type Animal = Fish | Bird; // these two can be distinguished from each ot
  */
 export type SortOfAnimals = Animal | "bread"; // but this one can't, since the string "bread" won't have that field
 
-type AnimalVelocity = {
+interface AnimalVelocity {
   speed: number;
   direction: "left" | "right";
-};
+}
 
 /**
  * An example of an intersection type -- has the properties of both fish and animalvelocity

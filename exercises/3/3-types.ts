@@ -2,10 +2,10 @@
  * Example Types
  */
 
-export type Person = {
+export interface Person {
   name: string;
   age: number;
-};
+}
 
 /**
  * Exercises Types
