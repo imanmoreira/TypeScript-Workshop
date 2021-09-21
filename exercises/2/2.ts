@@ -39,6 +39,11 @@ function isFish3(value: any): value is Fish {
   );
 }
 
+/**
+ * Determines the sound of the given animal
+ * @param animal the animal who's sound is being returned
+ * @returns the sound the animal makes
+ */
 function animalSound(animal: Animal) {
   return isFish2(animal) ? "blub" : "squack"; // This is a terenary, basically an inline if statement
 }

@@ -39,9 +39,7 @@ export function buildName(firstName: string, lastName: string): string {
 //
 
 /**
- * Write another version of the above function but use `.reduce(...)` instead.
- * It's similar to foldr -- Documentation can be found here:
- * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce
+ * Write a function
  */
 
 //
