@@ -37,9 +37,3 @@ export function buildName(firstName: string, lastName: string): string {
  */
 
 //
-
-/**
- * Write a function
- */
-
-//

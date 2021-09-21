@@ -65,7 +65,7 @@ function animalSound(animal: Animal) {
 
 /**
  * Write a function that takes the above data type and returns a sum of all the numbers.
- * It should ignore any numbers.
+ * It should ignore any non-numbers.
  * Make sure to write a type definition in the types file and import them!
  */
 

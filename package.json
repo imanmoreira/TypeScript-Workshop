@@ -4,7 +4,8 @@
   "description": "Before",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "ts": "ts-node"
   },
   "repository": {
     "type": "git",

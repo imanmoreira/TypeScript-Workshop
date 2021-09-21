@@ -13,4 +13,4 @@ Make sure you've followed [these](https://www.notion.so/sandboxnu/Pre-Workshop-D
 
 ## Running Your Code
 
-Work through the given exercises -- to run your code, you can run `ts-node your-file-name` in the terminal.
+Work through the given exercises -- to run your code, you can run `npm run ts your-file-path` in the terminal.
