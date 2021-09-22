@@ -1,4 +1,5 @@
-import { buildName } from "./1"; // Add imports for your other two functions to write tests for them!
+import exp from "constants";
+import { buildName, longerString, sumArray } from "./1"; // Add imports for your other two functions to write tests for them!
 
 /**
  * Unit testing file! : https://jestjs.io/docs/expect
@@ -32,11 +33,17 @@ test("Test longer string function", () => {
   /**
    * add tests here!
    */
+  expect(longerString("hello", "world")).toBe("hello");
+  expect(longerString("hello", "universe")).toBe("universe");
+  expect(longerString("hmm", "")).toBe("hmm");
 });
 test("Test sum function", () => {
   /**
    * add tests here!
    */
+  expect(sumArray([1, 2, 3])).toBe(6);
+  expect(sumArray([])).toBe(0);
+  expect(sumArray([4, 5, 2, -1])).toBe(10);
 });
 test("Test sum function 2", () => {
   /**

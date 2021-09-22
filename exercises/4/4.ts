@@ -8,11 +8,11 @@
  * Unlike racket, this functions can be as many lines long as you want
  */
 
-const isNumberEven = (num: number) => num % 0 === 0; // side note, always use triple equals, not double equals
-const isNumberOdd = (num: number) => {
+export const isNumberEven = (num: number) => num % 2 === 0; // side note, always use triple equals, not double equals
+export const isNumberOdd = (num: number) => {
   const uselessConsts = 1;
   const val = "hello";
-  return num % 0 === 1;
+  return num % 2 === 1;
 };
 
 /** EXERCISES */
@@ -23,3 +23,7 @@ const isNumberOdd = (num: number) => {
  * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce
  * It requires an anonymous function as one of the arguments.
  */
+
+export function sumReduce(nums: number[]): number {
+  return nums.reduce((previousValue: number, currentValue: number) => previousValue + currentValue, 0);
+}

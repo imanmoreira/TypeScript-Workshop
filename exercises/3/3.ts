@@ -44,7 +44,7 @@ function buildName(firstName: string, lastName?: string): string {
  */
 
 export function increaseAge(person: Person): Person {
-  if (person.age) {
+  if (person.age || person.age === 0) {
     return { name: person.name, age: person.age + 1 };
   } else {
     return person;
@@ -64,13 +64,45 @@ export function increaseAge(person: Person): Person {
  * 0  1  2  3  4   5
  */
 
+import { Player, Direction } from "./3-types"
+let startingState: Player = {
+  location: 0,
+  alive: true
+}
+let deadPlayer: Player = {
+  location: 4,
+  prevDirection: "right",
+  alive: false
+}
+
 /**
  * Create a function that takes a location (1d index) of an enemy and a player
  * and determines if they crossed paths with the enemy at the given location.
  */
+export function crossedEnemy(enemy: number, player: Player): boolean {
+  return (player.location >= enemy || 
+    ("prevDirection" in player && player.prevDirection == "left" && player.location == enemy - 1));
+}
+
 
 /**
  * Create a movement function for your player that takes in a Player and optionally a Direction.
  * THe function should update the Player object to reflect their new location and their previous move
  * If no direction is provided, their character should somehow indicate that their previous move was no movement.
  */
+
+export function move(player: Player, direction?: Direction): Player {
+  if (direction) {
+    return {
+      location: direction === "left" ? player.location - 1 : player.location + 1,
+      prevDirection: direction,
+      alive: player.alive
+    }
+  } else {
+    return {
+      location: player.location,
+      prevDirection: undefined,
+      alive: player.alive
+    }
+  }
+}
